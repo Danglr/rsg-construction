@@ -1,7 +1,7 @@
 # rsg-construction
-Simple construction job for RSG core
+Simple construction job for RSG core v2
 
-Original code made by xThrasher / Converted& restructered bt:Danglr
+Original code made by xThrasher / Converted & restructered by:Danglr
   -https://github.com/xThrasherrr/xt-construction/
 
 INSTALLATION:
@@ -15,3 +15,8 @@ You can configure anything easily thru the config.lua
 -DEPENDENCIES:
   -rsg-core : https://github.com/Rexshack-RedM/rsg-core
   -ox-lib : https://github.com/overextended/ox_lib
+
+  -POSSIBLE DEPENDECY-
+  rsg-menu (if this is needed then heres the link to a working one)
+  -https://github.com/Danglr/rsg-menu
+  
