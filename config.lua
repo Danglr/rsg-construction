@@ -18,7 +18,7 @@ Config.PlaceTime = 5 -- How long the progressbar to place wood is - In Seconds
 Config.XPBaseReward = 5            
 Config.XPRewardMultiplier = 1.0      
 Config.XPPerLevel = 100              
-Config.CashBonusPerLevel = 0.15      
+Config.CashBonusPerLevel = 0.15     -- 0.15 = 15% (1.0 would equal 100%) 
 
 -- MAX LEVEL CONFIGURATION
 Config.MaxLevel = 5
