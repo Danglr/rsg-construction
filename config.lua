@@ -1,7 +1,7 @@
 Config = {}
 
--- DEBUG AND EXTRAS --
-Config.Prints = true -- Used for Debug Prints
+
+Config.Prints = true --Debug Prints
 Config.StuckPropCommand = true -- Enables command for stuck props
 Config.DisableSprintJump = true -- Enable to disable sprint / jump while carrying plank
 Config.Keys = {
