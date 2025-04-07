@@ -20,7 +20,7 @@ Config.XPRewardMultiplier = 1.0
 Config.XPPerLevel = 100              
 Config.CashBonusPerLevel = 0.15     -- 0.15 = 15% (1.0 would equal 100%) 
 
--- MAX LEVEL CONFIGURATION
+-- MAX CONSTRUCTION LEVEL CONFIGURATION
 Config.MaxLevel = 5
 
 -- Prop models based on construction level (Levels 1 to 5)
@@ -33,8 +33,6 @@ Config.PropModels = {
 }
 
 
-
--- NPC LOCATIONS --
 Config.JobNpc = {
 	[1] = { ["Model"] = "A_M_M_ValFarmer_01", ["Pos"] = vector3(-859.2, -1279.73, 43.56),         ["Heading"] = 350.34,    ["Name"] = "Blackwater" },     -- Blackwater
 	[2] = { ["Model"] = "A_M_M_ValFarmer_01", ["Pos"] = vector3(-4193.972, -3441.868, 37.08226),  ["Heading"] = 46.157726, ["Name"] = "FortMercer" },     -- FortMercer
@@ -49,7 +47,6 @@ Config.JobNpc = {
 	[11] = { ["Model"] = "A_M_M_ValFarmer_01", ["Pos"] = vector3(-339.6, 796.82, 116.6), ["Heading"] = 150.07, ["Name"] = "Valentine" }, -- Valentine
 }
 
--- LOCATION OF JOB SITES --
 Config.Locations = {
 	["Blackwater"] = {
 		["Location"] = vector3(-859.2434, -1277.857, 43.559108),
