@@ -1,6 +1,10 @@
 # rsg-construction
 Simple construction job for RSG core v2
 
+Added level system
+Added bonus percentage pay rates per level
+Added ore config options
+
 Original code made by xThrasher / Converted & restructered by:Danglr
   -https://github.com/xThrasherrr/xt-construction/
 
