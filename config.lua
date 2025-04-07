@@ -27,7 +27,7 @@ Config.MaxLevel = 5
 Config.PropModels = {
     [1] = "p_woodplank01x",       -- Level 1 (default)
     [2] = "s_beechers_frame01x",  -- Level 2 (replace with your actual model name)
-    [3] = "p_woodplank04x",       -- Level 3
+    [3] = "p_woodplank01x",       -- Level 3
     [4] = "p_woodplank01x",   -- Level 4
     [5] = "s_beechers_frame01x",  -- Level 5
 }
