@@ -19,10 +19,7 @@ local dropBlip
 local jobBlip
 local closestJob = {}
 
------------------------------------------
--------------- EXTRA --------------------
------------------------------------------
--- REMOVE PROPS COMMAND --
+
 if Config.StuckPropCommand then
     RegisterCommand('propstuck', function()
         for k, v in pairs(GetGamePool('CObject')) do
@@ -35,9 +32,7 @@ if Config.StuckPropCommand then
     end)
 end
 
---------------------------------------
--------------- FUNCTIONS -------------
---------------------------------------
+
 
 local function PickupWoodLocation()
     local player = PlayerPedId()
@@ -67,9 +62,7 @@ local function DropWoodLocation()
     TriggerEvent('rNotify:ShowObjective', "Go to where this is needed", 4000)
 end
 
---------------------------------------
---------------- THREADS --------------
---------------------------------------
+
 CreateThread(function()
     for _, v in pairs(Config.JobNpc) do
         local blip = N_0x554d9d53f696d002(1664425300, v["Pos"].x, v["Pos"].y, v["Pos"].z)
@@ -110,9 +103,7 @@ CreateThread(function()
     end
 end)
 
---------------------------------------
---------------- EVENTS --------------
---------------------------------------
+
 
 RegisterNetEvent('rsg-construction:StartJob', function()
     local player = PlayerPedId()
@@ -158,7 +149,7 @@ end)
 RegisterNetEvent('rsg-construction:CollectPaycheck', function()
     print("Drop Count: " .. DropCount)
     
-    -- Award XP for the completed job. Adjust performance multiplier as needed.
+ 
     TriggerServerEvent('rsg-construction:AddXP', Config.XPBaseReward, 1.2)
     
     TriggerServerEvent('rsg-construction:GetDropCount', DropCount)
@@ -183,7 +174,7 @@ RegisterNetEvent('rsg-construction:CollectPaycheck', function()
     end
 end)
 
--- Updated wood pickup event to select the prop model based on player level.
+
 RegisterNetEvent('rsg-construction:PickupWood', function()
     local coords = GetEntityCoords(PlayerPedId())
     if hasJob and not PickedUp then
@@ -237,7 +228,7 @@ RegisterNetEvent('rsg-construction:DropWood', function()
         Wait(100)
         PickedUp = false
 
-        -- START ANIMATION --
+
         TaskStartScenarioInPlace(PlayerPedId(), GetHashKey('world_human_crouch_inspect'), -1, true, false, false, false)
         Citizen.Wait(Config.PlaceTime * 1000)
         ClearPedTasks(PlayerPedId())
@@ -261,9 +252,6 @@ RegisterNetEvent('rsg-construction:DropWood', function()
     end
 end)
 
---------------------------------------
---------------- JOB MENU -------------
---------------------------------------
 
 RegisterNetEvent('rsg-construction:OpenJobMenu', function()
 
@@ -325,9 +313,6 @@ RegisterNetEvent('rsg-construction:OpenJobMenu', function()
     exports['rsg-menu']:openMenu(jobMenu)
 end)
 
---------------------------
-------- PED SPAWNING -----
---------------------------
 
 function SET_PED_RELATIONSHIP_GROUP_HASH(iVar0, iParam0)
     return Citizen.InvokeNative(0xC80A74AC829DDD92, iVar0, _GET_DEFAULT_RELATIONSHIP_GROUP_HASH(iParam0))
@@ -378,9 +363,6 @@ CreateThread(function()
     end
 end)
 
-------------------------------------
------------- DRAWTEXT --------------
-------------------------------------
 
 function DrawText3D(x, y, z, text)
     local onScreen, _x, _y = GetScreenCoordFromWorldCoord(x, y, z)
@@ -418,12 +400,12 @@ AddEventHandler('onResourceStop', function(resource)
     end
 end)
 
--- Updated event to display notifications using rNotify
+
 RegisterNetEvent('rsg-construction:Notify', function(message)
     TriggerEvent('rNotify:ShowAdvancedRightNotification', message, "generic_textures", "tick", "COLOR_GREEN", 4000)
 end)
 
--- New event to check construction XP and notify the player using rNotify
+
 RegisterNetEvent('rsg-construction:CheckXP', function()
     RSGCore.Functions.TriggerCallback('rsg-construction:CheckXP', function(data)
         local xp = data.xp or 0
